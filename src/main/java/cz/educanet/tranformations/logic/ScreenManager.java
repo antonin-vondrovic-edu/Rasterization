@@ -10,6 +10,7 @@ public class ScreenManager {
     private Set<Coordinate> selectedPoints = new HashSet<>();
 
     public void select(Coordinate coordinate) {
+
         selectedPoints.add(coordinate);
     }
 
@@ -18,14 +19,20 @@ public class ScreenManager {
     }
 
     public boolean isSelected(Coordinate coordinate) {
+
         return selectedPoints.contains(coordinate);
     }
 
     public Set<Coordinate> getSelectedPoints() {
+
         return selectedPoints;
     }
 
     public boolean isFilledIn(Coordinate coordinate) { // TODO: Implement this
-        return false;
+        if(isSelected(coordinate)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
