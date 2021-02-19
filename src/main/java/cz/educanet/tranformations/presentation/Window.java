@@ -11,6 +11,7 @@ public class Window extends JFrame {
     public Window(int width, int height, String title) {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(width, height);
+        setTitle(title);
         setVisible(true);
 
         JPanel root = new JPanel();
